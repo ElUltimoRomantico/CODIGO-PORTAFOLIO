@@ -224,3 +224,46 @@ console.log(
 "%cPortafolio desarrollado por Edwin Santiago Reyes Ospina",
 "color:#4A7CFF;font-size:16px;font-weight:bold;"
 );  
+/*==============================
+      VISOR DE MODELOS 3D
+==============================*/
+
+const modal = document.getElementById("modelModal");
+
+const viewer = document.getElementById("modalViewer");
+
+const closeModal = document.getElementById("closeModal");
+
+const buttons = document.querySelectorAll(".openModel");
+
+buttons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        viewer.src = button.dataset.model;
+
+        modal.classList.add("active");
+
+    });
+
+});
+
+closeModal.addEventListener("click",()=>{
+
+    modal.classList.remove("active");
+
+    viewer.removeAttribute("src");
+
+});
+
+modal.addEventListener("click",(e)=>{
+
+    if(e.target===modal){
+
+        modal.classList.remove("active");
+
+        viewer.removeAttribute("src");
+
+    }
+
+});
