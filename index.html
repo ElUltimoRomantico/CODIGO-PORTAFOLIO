@@ -333,21 +333,13 @@
         </div>
 
         <!-- Modelo 1 -->
+         <div class="model-project">
 
-        <div class="model-project">
+        <div class="model-image">
 
-            <div class="model-view">
+    <img src="img/megaswampert.jpeg" alt="Megaswampert">
 
-                <model-viewer
-                    src="models/megaswampert.glb"
-                    camera-controls
-                    auto-rotate
-                    shadow-intensity="1.3"
-                    exposure="1.2"
-                    interaction-prompt="none">
-                </model-viewer>
-
-            </div>
+</div>
 
             <div class="model-info">
 
@@ -358,7 +350,13 @@
                 <p>
                     Modelo inspirado en Pokémon realizado completamente en Autodesk Maya y texturizado en Substance Painter.
                 </p>
+<button class="btn primary openModel"
+        data-model="models/megaswampert.glb">
+<i class="fa-solid fa-cube"></i>
+    Ver modelo 3D
 
+</button>
+            </div>
             </div>
 
         </div>
@@ -367,16 +365,9 @@
 
         <div class="model-project">
 
-            <div class="model-view">
+            <div class="model-image">
 
-                <model-viewer
-                    src="models/patineta.glb"
-                    camera-controls
-                    auto-rotate
-                    shadow-intensity="1.3"
-                    exposure="1.2"
-                    interaction-prompt="none">
-                </model-viewer>
+                <img src="img/patineta.jpeg" alt="Patineta">
 
             </div>
 
@@ -389,8 +380,14 @@
                 <p>
                     Modelo obtenido de Sketchfab y texturizado en Substance Painter, inspirado en el anime Jujutsu Kaisen.
                 </p>
+<button class="btn primary openModel"
+        data-model="models/patineta.glb">
+<i class="fa-solid fa-cube"></i>
+    Ver modelo 3D
 
+</button>
             </div>
+            
 
         </div>
 
@@ -398,16 +395,9 @@
 
         <div class="model-project">
 
-            <div class="model-view">
+            <div class="model-image">
 
-                <model-viewer
-                    src="models/mosasaurio.glb"
-                    camera-controls
-                    auto-rotate
-                    shadow-intensity="1.3"
-                    exposure="1.2"
-                    interaction-prompt="none">
-                </model-viewer>
+                <img src="img/mosasaurio.jpeg" alt="Mosasaurio">
 
             </div>
 
@@ -420,13 +410,42 @@
                 <p>
                     Modelado realizado en Maya, esculpido en Mudbox y texturizado en Substance Painter, inspirado en un mosasaurio.
                 </p>
+                <button class="btn primary openModel"
+        data-model="models/mosasaurio.glb">
+<i class="fa-solid fa-cube"></i>
+    Ver modelo 3D
+
+</button>
 
             </div>
 
         </div>
+        
 
     </div>
+<div class="sketchfab-card">
 
+    <i class="fa-solid fa-cubes sketchfab-icon"></i>
+
+    <h3>¿Quieres ver más de mi trabajo?</h3>
+
+    <p>
+
+        Explora todos mis modelos 3D publicados en Sketchfab,
+        donde encontrarás versiones interactivas y futuros proyectos.
+
+    </p>
+
+    <a href="https://sketchfab.com/reyessantiago515"
+       target="_blank"
+       class="btn primary">
+
+        Ver mi perfil en Sketchfab
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+    </a>
+
+</div>
 </section>
 <!--================ ilustracion y arte  ================-->
 
@@ -569,7 +588,29 @@
         </p>
 
     </footer>
+<!--================ VISOR DE MODELO ================-->
 
+<div id="modelModal" class="model-modal">
+
+    <div class="modal-content">
+
+        <button id="closeModal" class="close-modal">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <model-viewer
+            id="modalViewer"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1.3"
+            exposure="1.2"
+            interaction-prompt="none"
+            style="width:100%; height:100%;">
+        </model-viewer>
+
+    </div>
+
+</div>
     <!-- JS -->
 
     <script src="js/script.js"></script>
